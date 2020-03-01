@@ -1,22 +1,16 @@
 package com.gildedrose.item;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-
 /**
  * AgedBrie:
  * @author zhangxuhai
  * @date 2020/3/1
 */
-@Getter
-@AllArgsConstructor
-public class AgedBrie {
-    private String name;
+public class AgedBrie extends AbstractItem{
+    public AgedBrie(int sellIn, int quality) {
+        super("AgedBrie", sellIn, quality);
+    }
 
-    private int sellIn;
-
-    private int quality;
-
+    @Override
     public void updateQuality() {
         sellIn--;
         if (quality < 50) {

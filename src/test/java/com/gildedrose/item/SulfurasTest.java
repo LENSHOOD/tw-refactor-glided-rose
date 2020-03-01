@@ -9,7 +9,7 @@ import static org.junit.Assert.*;
 class SulfurasTest {
     @Test
     void should_do_nothing_when_update_quality() {
-        Sulfuras sulfuras = new Sulfuras("Sulfuras, Hand of Ragnaros", 1, 1);
+        Sulfuras sulfuras = new Sulfuras(1, 1);
 
         sulfuras.updateQuality();
 

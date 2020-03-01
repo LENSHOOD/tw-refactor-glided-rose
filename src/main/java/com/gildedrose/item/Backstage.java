@@ -1,22 +1,16 @@
 package com.gildedrose.item;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-
 /**
  * Backstage:
  * @author zhangxuhai
  * @date 2020/3/1
 */
-@AllArgsConstructor
-@Getter
-public class Backstage {
-    private String name;
+public class Backstage extends AbstractItem {
+    public Backstage(int sellIn, int quality) {
+        super("Backstage passes to a TAFKAL80ETC concert", sellIn, quality);
+    }
 
-    private int sellIn;
-
-    private int quality;
-
+    @Override
     public void updateQuality() {
         sellIn--;
         if (quality < 50) {
