@@ -18,4 +18,16 @@ public abstract class AbstractItem {
     protected int quality;
 
     public abstract void updateQuality();
+
+    void addQuality() {
+        if (quality < 50) {
+            quality++;
+        }
+    }
+
+    void subtractQuality() {
+        if (quality > 0) {
+            quality--;
+        }
+    }
 }

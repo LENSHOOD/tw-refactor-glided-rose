@@ -13,20 +13,19 @@ public class Backstage extends AbstractItem {
     @Override
     public void updateQuality() {
         sellIn--;
-        if (quality < 50) {
-            quality++;
 
-            if (sellIn < 11) {
-                quality++;
-            }
+        addQuality();
 
-            if (sellIn < 6) {
-                quality++;
-            }
+        if (sellIn < 11) {
+            addQuality();
+        }
 
-            if (sellIn < 0) {
-                quality = 0;
-            }
+        if (sellIn < 6) {
+            addQuality();
+        }
+
+        if (sellIn < 0) {
+            quality = 0;
         }
     }
 }

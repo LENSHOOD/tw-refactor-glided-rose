@@ -20,10 +20,4 @@ public class GeneralItem extends AbstractItem {
             subtractQuality();
         }
     }
-
-    private void subtractQuality() {
-        if (quality > 0) {
-            quality--;
-        }
-    }
 }
