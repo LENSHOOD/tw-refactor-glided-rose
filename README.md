@@ -18,3 +18,22 @@
 2. 尝试通过【重构五步法】，进行重构
 3. 小步提交，在提交信息中需要标明被识别并重构的坏味道
 
+## Biz Analyze
+Update Quality
+
+1. Aged Brie
+    - quality < 50, then +1
+    - sell-in -1
+    - sell-in < 0 && quality < 50, then +1 
+2. Backstage passes to a TAFKAL80ETC concert
+    - quality < 50, then +1
+    - sell-in < 11 && quality < 50, then +1 
+    - sell-in < 6 && quality < 50, then +1 
+    - sell-in -1
+    - sell-in < 0 then quality = 0 
+3. Sulfuras, Hand of Ragnaros
+    - do nothing
+4. Others
+    - quality > 0, then -1
+    - sell-in -1
+    - sell-in < 0 && quality > 0, then -1
